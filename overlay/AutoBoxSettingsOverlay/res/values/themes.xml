@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--
+        AutoBox Settings theme.
+        Supports both light and dark modes via adaptive @color/* resources:
+          - res/values/colors.xml       → light (white bg, dark borders)
+          - res/values-night/colors.xml → dark  (black bg, white borders)
+
+        The system switches automatically based on the active UI mode
+        (Settings → Display → Dark theme, or forced via UiModeManager).
+    -->
+    <style name="Theme.Settings" parent="@android:style/Theme.DeviceDefault">
+
+        <!-- Page background — adapts to light/dark -->
+        <item name="android:windowBackground">@color/autobox_bg</item>
+        <item name="android:colorBackground">@color/autobox_bg</item>
+
+        <!-- Text — adapts to light/dark -->
+        <item name="android:textColorPrimary">@color/autobox_text_primary</item>
+        <item name="android:textColorSecondary">@color/autobox_text_secondary</item>
+
+        <!-- Icons — adapts to light/dark -->
+        <item name="android:drawableTint">@color/autobox_icon_tint</item>
+
+        <!-- Hide dividers (spacing done via item margins) -->
+        <item name="android:listDivider">@color/autobox_divider</item>
+        <item name="android:divider">@color/autobox_divider</item>
+        <item name="android:dividerHeight">@dimen/autobox_pref_item_spacing</item>
+
+    </style>
+
+</resources>

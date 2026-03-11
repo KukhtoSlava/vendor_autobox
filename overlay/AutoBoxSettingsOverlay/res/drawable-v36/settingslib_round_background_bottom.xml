@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- AutoBox: last item in a group — border on bottom + sides, no top border -->
+<ripple xmlns:android="http://schemas.android.com/apk/res/android"
+    android:color="?android:colorControlHighlight"
+    android:paddingStart="32dp"
+    android:paddingEnd="32dp">
+    <item
+        android:start="?android:attr/listPreferredItemPaddingStart"
+        android:end="?android:attr/listPreferredItemPaddingEnd">
+        <layer-list>
+            <item>
+                <shape android:shape="rectangle">
+                    <solid android:color="@color/autobox_pref_bg" />
+                </shape>
+            </item>
+            <item android:top="-2dp">
+                <shape android:shape="rectangle">
+                    <stroke android:width="1.5dp" android:color="@color/autobox_border" />
+                    <solid android:color="@android:color/transparent" />
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+</ripple>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Border stroke width -->
+    <dimen name="autobox_border_width">1.5dp</dimen>
+
+    <!-- Chamfered corner size (must match ChamferedBorderDrawable.DEFAULT_CORNER_CUT_DP) -->
+    <dimen name="autobox_corner_cut">8dp</dimen>
+
+    <!-- Vertical gap between preference items -->
+    <dimen name="autobox_pref_item_spacing">6dp</dimen>
+</resources>

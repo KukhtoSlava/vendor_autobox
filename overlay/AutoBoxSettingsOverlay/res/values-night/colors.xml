@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Dark theme colors (night mode) — black bg, white borders (screenshot 1) -->
+<resources>
+    <color name="autobox_bg">#FF000000</color>
+    <color name="autobox_pref_bg">#FF0D0D0D</color>
+    <color name="autobox_border">#FFFFFFFF</color>
+    <color name="autobox_text_primary">#FFFFFFFF</color>
+    <color name="autobox_text_secondary">#FFB0B0B0</color>
+    <color name="autobox_icon_tint">#FFFFFFFF</color>
+    <color name="autobox_divider">#00000000</color>
+</resources>

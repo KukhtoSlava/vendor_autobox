@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    AutoBox SystemUI overrides.
+
+    qs_corner_radius default = 28dp. During long-press animation the tile shrinks to
+    (28dp - 20px) ≈ 21dp which looks "selected". Small 1x1 icon tiles with 28dp appear
+    nearly circular. Setting 18dp makes all tiles uniformly less rounded.
+-->
+<resources>
+    <dimen name="qs_corner_radius">18dp</dimen>
+</resources>

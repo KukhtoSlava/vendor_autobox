@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Light theme colors (default) — white bg, dark borders (screenshot 2) -->
+<resources>
+    <color name="autobox_bg">#FFFFFFFF</color>
+    <color name="autobox_pref_bg">#FFFFFFFF</color>
+    <color name="autobox_border">#FF1A1A1A</color>
+    <color name="autobox_text_primary">#FF1A1A1A</color>
+    <color name="autobox_text_secondary">#FF555555</color>
+    <color name="autobox_icon_tint">#FF1A1A1A</color>
+    <color name="autobox_divider">#00000000</color>
+</resources>
