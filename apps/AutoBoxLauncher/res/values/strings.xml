@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">AutoBox Launcher</string>
+
+    <!-- Settings screen -->
+    <string name="settings_title">Settings</string>
+    <string name="exit_button">EXIT</string>
+
+    <string name="settings_theme">Theme</string>
+    <string name="theme_light">Light</string>
+    <string name="theme_dark">Dark</string>
+    <string name="theme_auto">Auto</string>
+
+    <string name="settings_volume">Volume</string>
+    <string name="settings_brightness">Screen Brightness</string>
+
+    <string name="settings_units">Units</string>
+    <string name="units_metric">Metric (km/h)</string>
+    <string name="units_imperial">Imperial (mph)</string>
+
+    <string name="settings_media_app">Music App</string>
+    <string name="settings_sign_recognition">Sign Recognition</string>
+    <string name="settings_sign_recognition_desc">Recognize road signs via camera</string>
+    <string name="media_app_not_selected">Not selected</string>
+    <string name="media_app_no_apps">No media apps found</string>
+
+    <!-- Call screen — tabs -->
+    <string name="call_tab_contacts">Contacts</string>
+    <string name="call_tab_recent">Recent</string>
+    <string name="call_tab_dialpad">Dialpad</string>
+
+    <!-- Call screen — search -->
+    <string name="call_search_contacts_hint">Search contacts…</string>
+    <string name="call_search_recent_hint">Search history…</string>
+
+    <!-- Call screen — empty states -->
+    <string name="call_no_contacts">No contacts found</string>
+    <string name="call_no_results">No results for \"%s\"</string>
+    <string name="call_no_recent">Call history is empty</string>
+
+    <!-- Call screen — actions -->
+    <string name="call_action_call">Call</string>
+    <string name="call_action_callback">Call back</string>
+    <string name="call_action_delete">Delete</string>
+    <string name="call_enter_number">Enter number</string>
+    <string name="call_incoming">Incoming call</string>
+    <string name="call_decline">Decline</string>
+    <string name="call_answer">Answer</string>
+    <string name="call_mute_on">Mic on</string>
+    <string name="call_mute_off">Mic off</string>
+    <string name="call_audio_speaker">Speaker</string>
+    <string name="call_audio_earpiece">Earpiece</string>
+    <string name="call_end">End call</string>
+    <string name="call_banner_tap_hint">Tap for controls</string>
+    <string name="call_unknown_caller">Unknown</string>
+
+    <!-- Call screen — time labels -->
+    <string name="call_time_just_now">just now</string>
+    <string name="call_time_minutes_ago">%d min. ago</string>
+
+    <!-- Navigation -->
+    <string name="nav_status_active">Navigation active</string>
+    <string name="nav_status_free_driving">Free driving</string>
+    <string name="nav_status_route_ready">Route ready</string>
+    <string name="nav_stop">Stop</string>
+    <string name="nav_start">Start</string>
+    <string name="nav_clear">Clear</string>
+    <string name="nav_stop_description">Stop navigation</string>
+    <string name="nav_error_route_not_returned">Route was not returned</string>
+    <string name="nav_error_destination_not_found">Destination not found</string>
+    <string name="nav_eta">ETA %s</string>
+    <string name="nav_distance">Distance: %s</string>
+
+    <!-- Map -->
+    <string name="map_zoom_in">Zoom in</string>
+    <string name="map_zoom_out">Zoom out</string>
+    <string name="map_my_location">My location</string>
+    <string name="map_search_hint">Search address…</string>
+    <string name="map_clear_search">Clear</string>
+
+    <!-- Multimedia -->
+    <string name="multimedia_no_app_selected">Please install or select a Multimedia app in Settings</string>
+    <string name="multimedia_library">Library</string>
+    <string name="multimedia_queue">Queue</string>
+    <string name="multimedia_queue_waiting">Press play to begin playback</string>
+    <string name="multimedia_back">Back</string>
+    <string name="multimedia_load_error">Failed to load content</string>
+    <string name="multimedia_empty">Nothing here</string>
+    <string name="media_album_art">Album art</string>
+    <string name="media_nothing_playing">Nothing playing</string>
+    <string name="media_music_note">♪</string>
+    <string name="media_previous">Previous</string>
+    <string name="media_play">Play</string>
+    <string name="media_pause">Pause</string>
+    <string name="media_next">Next</string>
+    <string name="media_no_source">No source</string>
+
+    <!-- Dialpad letter hints -->
+    <string name="dialpad_2">ABC</string>
+    <string name="dialpad_3">DEF</string>
+    <string name="dialpad_4">GHI</string>
+    <string name="dialpad_5">JKL</string>
+    <string name="dialpad_6">MNO</string>
+    <string name="dialpad_7">PQRS</string>
+    <string name="dialpad_8">TUV</string>
+    <string name="dialpad_9">WXYZ</string>
+</resources>

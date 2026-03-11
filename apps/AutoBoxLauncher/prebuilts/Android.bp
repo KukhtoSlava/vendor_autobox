@@ -1,0 +1,986 @@
+// TomTom SDK 2.1.2 prebuilt AARs + native libs
+// Generated for AutoBoxLauncher AOSP build
+
+package {
+    default_applicable_licenses: ["Android-Apache-2.0"],
+}
+
+// AppCompat 1.7.0 from Gradle cache — same version TomTom SDK was compiled against.
+// Use this instead of AOSP prebuilt (1.8.0-alpha01) to avoid R.styleable ID mismatch.
+android_library_import {
+    name: "autobox-appcompat",
+    aars: ["tomtom/appcompat.aar"],
+    sdk_version: "current",
+    min_sdk_version: "26",
+}
+
+android_library_import {
+    name: "autobox-appcompat-resources",
+    aars: ["tomtom/appcompat-resources.aar"],
+    sdk_version: "current",
+    min_sdk_version: "26",
+}
+
+android_library_import {
+    name: "tomtom-sdk-init",
+    aars: ["tomtom/init.aar"],
+    sdk_version: "current",
+    min_sdk_version: "26",
+}
+
+android_library_import {
+    name: "tomtom-sdk-native",
+    aars: ["tomtom/native.aar"],
+    sdk_version: "current",
+    min_sdk_version: "26",
+}
+
+android_library_import {
+    name: "tomtom-sdk-feature-toggle",
+    aars: ["tomtom/feature-toggle.aar"],
+    sdk_version: "current",
+    min_sdk_version: "26",
+}
+
+android_library_import {
+    name: "tomtom-sdk-adasisv2",
+    aars: ["tomtom/adasisv2.aar"],
+    sdk_version: "current",
+    min_sdk_version: "26",
+}
+
+android_library_import {
+    name: "tomtom-sdk-annotations",
+    aars: ["tomtom/annotations.aar"],
+    sdk_version: "current",
+    min_sdk_version: "26",
+}
+
+android_library_import {
+    name: "tomtom-sdk-font-provider",
+    aars: ["tomtom/font-provider.aar"],
+    sdk_version: "current",
+    min_sdk_version: "26",
+}
+
+android_library_import {
+    name: "tomtom-sdk-common-configuration",
+    aars: ["tomtom/common-configuration.aar"],
+    sdk_version: "current",
+    min_sdk_version: "26",
+}
+
+android_library_import {
+    name: "tomtom-sdk-common-core",
+    aars: ["tomtom/common-core.aar"],
+    sdk_version: "current",
+    min_sdk_version: "26",
+}
+
+android_library_import {
+    name: "tomtom-sdk-file-loader",
+    aars: ["tomtom/file-loader.aar"],
+    sdk_version: "current",
+    min_sdk_version: "26",
+}
+
+android_library_import {
+    name: "tomtom-sdk-http-framework",
+    aars: ["tomtom/http-framework.aar"],
+    sdk_version: "current",
+    min_sdk_version: "26",
+}
+
+android_library_import {
+    name: "tomtom-sdk-http-framework-binding",
+    aars: ["tomtom/http-framework-binding.aar"],
+    sdk_version: "current",
+    min_sdk_version: "26",
+}
+
+android_library_import {
+    name: "tomtom-sdk-http-handler",
+    aars: ["tomtom/http-handler.aar"],
+    sdk_version: "current",
+    min_sdk_version: "26",
+}
+
+android_library_import {
+    name: "tomtom-sdk-initializer",
+    aars: ["tomtom/initializer.aar"],
+    sdk_version: "current",
+    min_sdk_version: "26",
+}
+
+android_library_import {
+    name: "tomtom-sdk-morton",
+    aars: ["tomtom/morton.aar"],
+    sdk_version: "current",
+    min_sdk_version: "26",
+}
+
+android_library_import {
+    name: "tomtom-sdk-mqtt-connector",
+    aars: ["tomtom/mqtt-connector.aar"],
+    sdk_version: "current",
+    min_sdk_version: "26",
+}
+
+android_library_import {
+    name: "tomtom-sdk-data-management-common",
+    aars: ["tomtom/data-management-common.aar"],
+    sdk_version: "current",
+    min_sdk_version: "26",
+}
+
+android_library_import {
+    name: "tomtom-sdk-data-store",
+    aars: ["tomtom/data-store.aar"],
+    sdk_version: "current",
+    min_sdk_version: "26",
+}
+
+android_library_import {
+    name: "tomtom-sdk-location-decoder",
+    aars: ["tomtom/location-decoder.aar"],
+    sdk_version: "current",
+    min_sdk_version: "26",
+}
+
+android_library_import {
+    name: "tomtom-sdk-map-references",
+    aars: ["tomtom/map-references.aar"],
+    sdk_version: "current",
+    min_sdk_version: "26",
+}
+
+android_library_import {
+    name: "tomtom-sdk-unified-location-decoder",
+    aars: ["tomtom/unified-location-decoder.aar"],
+    sdk_version: "current",
+    min_sdk_version: "26",
+}
+
+android_library_import {
+    name: "tomtom-sdk-geojson",
+    aars: ["tomtom/geojson.aar"],
+    sdk_version: "current",
+    min_sdk_version: "26",
+}
+
+android_library_import {
+    name: "tomtom-sdk-hazards",
+    aars: ["tomtom/hazards.aar"],
+    sdk_version: "current",
+    min_sdk_version: "26",
+}
+
+android_library_import {
+    name: "tomtom-sdk-hazards-common",
+    aars: ["tomtom/hazards-common.aar"],
+    sdk_version: "current",
+    min_sdk_version: "26",
+}
+
+android_library_import {
+    name: "tomtom-sdk-http-core",
+    aars: ["tomtom/http-core.aar"],
+    sdk_version: "current",
+    min_sdk_version: "26",
+}
+
+android_library_import {
+    name: "tomtom-sdk-location-road",
+    aars: ["tomtom/location-road.aar"],
+    sdk_version: "current",
+    min_sdk_version: "26",
+}
+
+android_library_import {
+    name: "tomtom-sdk-location-model",
+    aars: ["tomtom/location-model.aar"],
+    sdk_version: "current",
+    min_sdk_version: "26",
+}
+
+android_library_import {
+    name: "tomtom-sdk-location-provider-android",
+    aars: ["tomtom/location-provider-android.aar"],
+    sdk_version: "current",
+    min_sdk_version: "26",
+}
+
+android_library_import {
+    name: "tomtom-sdk-location-provider-api",
+    aars: ["tomtom/location-provider-api.aar"],
+    sdk_version: "current",
+    min_sdk_version: "26",
+}
+
+android_library_import {
+    name: "tomtom-sdk-location-provider-default",
+    aars: ["tomtom/location-provider-default.aar"],
+    sdk_version: "current",
+    min_sdk_version: "26",
+}
+
+android_library_import {
+    name: "tomtom-sdk-location-provider-mapmatched",
+    aars: ["tomtom/location-provider-mapmatched.aar"],
+    sdk_version: "current",
+    min_sdk_version: "26",
+}
+
+android_library_import {
+    name: "tomtom-sdk-logging-common",
+    aars: ["tomtom/logging-common.aar"],
+    sdk_version: "current",
+    min_sdk_version: "26",
+}
+
+android_library_import {
+    name: "tomtom-sdk-logger",
+    aars: ["tomtom/logger.aar"],
+    sdk_version: "current",
+    min_sdk_version: "26",
+}
+
+android_library_import {
+    name: "tomtom-sdk-logging-framework-binding",
+    aars: ["tomtom/logging-framework-binding.aar"],
+    sdk_version: "current",
+    min_sdk_version: "26",
+}
+
+android_library_import {
+    name: "tomtom-sdk-elastic-data-provider",
+    aars: ["tomtom/elastic-data-provider.aar"],
+    sdk_version: "current",
+    min_sdk_version: "26",
+}
+
+android_library_import {
+    name: "tomtom-sdk-map-display-common",
+    aars: ["tomtom/map-display-common.aar"],
+    sdk_version: "current",
+    min_sdk_version: "26",
+}
+
+android_library_import {
+    name: "tomtom-sdk-map-display-compose-common",
+    aars: ["tomtom/map-display-compose-common.aar"],
+    sdk_version: "current",
+    min_sdk_version: "26",
+}
+
+android_library_import {
+    name: "tomtom-sdk-map-display-compose-standard",
+    aars: ["tomtom/map-display-compose-standard.aar"],
+    sdk_version: "current",
+    min_sdk_version: "26",
+}
+
+android_library_import {
+    name: "tomtom-sdk-map-display-standard",
+    aars: ["tomtom/map-display-standard.aar"],
+    sdk_version: "current",
+    min_sdk_version: "26",
+}
+
+android_library_import {
+    name: "tomtom-sdk-map-display-standard-binding",
+    aars: ["tomtom/map-display-standard-binding.aar"],
+    sdk_version: "current",
+    min_sdk_version: "26",
+}
+
+android_library_import {
+    name: "tomtom-sdk-map-tile-store",
+    aars: ["tomtom/map-tile-store.aar"],
+    sdk_version: "current",
+    min_sdk_version: "26",
+}
+
+android_library_import {
+    name: "tomtom-sdk-map-tile-store-common",
+    aars: ["tomtom/map-tile-store-common.aar"],
+    sdk_version: "current",
+    min_sdk_version: "26",
+}
+
+android_library_import {
+    name: "tomtom-sdk-map-tile-store-navigation",
+    aars: ["tomtom/map-tile-store-navigation.aar"],
+    sdk_version: "current",
+    min_sdk_version: "26",
+}
+
+android_library_import {
+    name: "tomtom-sdk-maps-telemetry",
+    aars: ["tomtom/maps-telemetry.aar"],
+    sdk_version: "current",
+    min_sdk_version: "26",
+}
+
+android_library_import {
+    name: "tomtom-sdk-native-library-loader",
+    aars: ["tomtom/native-library-loader.aar"],
+    sdk_version: "current",
+    min_sdk_version: "26",
+}
+
+android_library_import {
+    name: "tomtom-sdk-navigation",
+    aars: ["tomtom/navigation.aar"],
+    sdk_version: "current",
+    min_sdk_version: "26",
+}
+
+android_library_import {
+    name: "tomtom-sdk-openlr-binding",
+    aars: ["tomtom/openlr-binding.aar"],
+    sdk_version: "current",
+    min_sdk_version: "26",
+}
+
+android_library_import {
+    name: "tomtom-sdk-personal-data-common",
+    aars: ["tomtom/personal-data-common.aar"],
+    sdk_version: "current",
+    min_sdk_version: "26",
+}
+
+android_library_import {
+    name: "tomtom-sdk-range-calculator",
+    aars: ["tomtom/range-calculator.aar"],
+    sdk_version: "current",
+    min_sdk_version: "26",
+}
+
+android_library_import {
+    name: "tomtom-sdk-route-planner",
+    aars: ["tomtom/route-planner.aar"],
+    sdk_version: "current",
+    min_sdk_version: "26",
+}
+
+android_library_import {
+    name: "tomtom-sdk-routing-common",
+    aars: ["tomtom/routing-common.aar"],
+    sdk_version: "current",
+    min_sdk_version: "26",
+}
+
+android_library_import {
+    name: "tomtom-sdk-safety-locations",
+    aars: ["tomtom/safety-locations.aar"],
+    sdk_version: "current",
+    min_sdk_version: "26",
+}
+
+android_library_import {
+    name: "tomtom-sdk-safety-locations-common",
+    aars: ["tomtom/safety-locations-common.aar"],
+    sdk_version: "current",
+    min_sdk_version: "26",
+}
+
+android_library_import {
+    name: "tomtom-sdk-reverse-geocoder",
+    aars: ["tomtom/reverse-geocoder.aar"],
+    sdk_version: "current",
+    min_sdk_version: "26",
+}
+
+android_library_import {
+    name: "tomtom-sdk-search",
+    aars: ["tomtom/search.aar"],
+    sdk_version: "current",
+    min_sdk_version: "26",
+}
+
+android_library_import {
+    name: "tomtom-sdk-search-common",
+    aars: ["tomtom/search-common.aar"],
+    sdk_version: "current",
+    min_sdk_version: "26",
+}
+
+android_library_import {
+    name: "tomtom-sdk-telemetry",
+    aars: ["tomtom/telemetry.aar"],
+    sdk_version: "current",
+    min_sdk_version: "26",
+}
+
+android_library_import {
+    name: "tomtom-sdk-traffic-client",
+    aars: ["tomtom/traffic-client.aar"],
+    sdk_version: "current",
+    min_sdk_version: "26",
+}
+
+android_library_import {
+    name: "tomtom-sdk-traffic-common",
+    aars: ["tomtom/traffic-common.aar"],
+    sdk_version: "current",
+    min_sdk_version: "26",
+}
+
+android_library_import {
+    name: "tomtom-sdk-traffic-internal",
+    aars: ["tomtom/traffic-internal.aar"],
+    sdk_version: "current",
+    min_sdk_version: "26",
+}
+
+android_library_import {
+    name: "tomtom-sdk-vehicle-common",
+    aars: ["tomtom/vehicle-common.aar"],
+    sdk_version: "current",
+    min_sdk_version: "26",
+}
+
+android_library_import {
+    name: "tomtom-sdk-vehicle-provider",
+    aars: ["tomtom/vehicle-provider.aar"],
+    sdk_version: "current",
+    min_sdk_version: "26",
+}
+
+android_library_import {
+    name: "tomtom-sdk-quantity",
+    aars: ["tomtom/quantity.aar"],
+    sdk_version: "current",
+    min_sdk_version: "26",
+}
+
+// Third-party
+android_library_import {
+    name: "logback-android",
+    aars: ["logback-android.aar"],
+    sdk_version: "current",
+    min_sdk_version: "26",
+}
+
+// OkHttp3 + Okio (TomTom SDK HTTP dependency — not in AOSP prebuilts at v4.x)
+java_import {
+    name: "autobox-okhttp3",
+    jars: ["thirdparty/okhttp.jar"],
+    sdk_version: "current",
+}
+
+java_import {
+    name: "autobox-okio",
+    jars: ["thirdparty/okio.jar"],
+    sdk_version: "current",
+}
+
+// Protobuf runtime (required by TomTom internal protobuf JARs)
+java_import {
+    name: "autobox-protobuf-java",
+    jars: ["thirdparty/protobuf-java.jar"],
+    sdk_version: "current",
+}
+
+java_import {
+    name: "autobox-protobuf-kotlin",
+    jars: ["thirdparty/protobuf-kotlin.jar"],
+    sdk_version: "current",
+}
+
+// TomTom internal protobuf JARs (not shipped as AARs, pulled as separate JARs in Gradle)
+java_import {
+    name: "tomtom-http-framework-binding-protobuf",
+    jars: ["thirdparty/tomtom-http-framework-binding-protobuf.jar"],
+    sdk_version: "current",
+}
+
+java_import {
+    name: "tomtom-native-protobuf",
+    jars: ["thirdparty/tomtom-native-protobuf.jar"],
+    sdk_version: "current",
+}
+
+java_import {
+    name: "tomtom-ndslive-map-protobuf",
+    jars: ["thirdparty/tomtom-ndslive-map-protobuf.jar"],
+    sdk_version: "current",
+}
+
+java_import {
+    name: "tomtom-navigation-tile-store-protobuf",
+    jars: ["thirdparty/tomtom-navigation-tile-store-protobuf.jar"],
+    sdk_version: "current",
+}
+
+java_import {
+    name: "tomtom-navigation-tiling-protobuf",
+    jars: ["thirdparty/tomtom-navigation-tiling-protobuf.jar"],
+    sdk_version: "current",
+}
+
+java_import {
+    name: "tomtom-nds-store-access-protobuf",
+    jars: ["thirdparty/tomtom-nds-store-access-protobuf.jar"],
+    sdk_version: "current",
+}
+
+java_import {
+    name: "tomtom-nds-store-update-protobuf",
+    jars: ["thirdparty/tomtom-nds-store-update-protobuf.jar"],
+    sdk_version: "current",
+}
+
+java_import {
+    name: "tomtom-map-matching-protobuf",
+    jars: ["thirdparty/tomtom-map-matching-protobuf.jar"],
+    sdk_version: "current",
+}
+
+java_import {
+    name: "tomtom-resume-snapshot-protobuf",
+    jars: ["thirdparty/tomtom-resume-snapshot-protobuf.jar"],
+    sdk_version: "current",
+}
+
+java_import {
+    name: "tomtom-route-projection-protobuf",
+    jars: ["thirdparty/tomtom-route-projection-protobuf.jar"],
+    sdk_version: "current",
+}
+
+java_import {
+    name: "tomtom-verbal-message-protobuf",
+    jars: ["thirdparty/tomtom-verbal-message-protobuf.jar"],
+    sdk_version: "current",
+}
+
+java_import {
+    name: "tomtom-openlr-binding-protobuf",
+    jars: ["thirdparty/tomtom-openlr-binding-protobuf.jar"],
+    sdk_version: "current",
+}
+
+java_import {
+    name: "tomtom-reverse-geocoding-protobuf",
+    jars: ["thirdparty/tomtom-reverse-geocoding-protobuf.jar"],
+    sdk_version: "current",
+}
+
+java_import {
+    name: "tomtom-directions-offline-protobuf",
+    jars: ["thirdparty/tomtom-directions-offline-protobuf.jar"],
+    sdk_version: "current",
+}
+
+java_import {
+    name: "tomtom-search-offline-protobuf",
+    jars: ["thirdparty/tomtom-search-offline-protobuf.jar"],
+    sdk_version: "current",
+}
+
+java_import {
+    name: "tomtom-structured-search-protobuf",
+    jars: ["thirdparty/tomtom-structured-search-protobuf.jar"],
+    sdk_version: "current",
+}
+
+java_import {
+    name: "tomtom-sensoris",
+    jars: ["thirdparty/tomtom-sensoris.jar"],
+    sdk_version: "current",
+}
+
+java_import {
+    name: "tomtom-traffic-client-protobuf",
+    jars: ["thirdparty/tomtom-traffic-client-protobuf.jar"],
+    sdk_version: "current",
+}
+
+// TomTom DCAS/security clients
+java_import {
+    name: "tomtom-dcas-client-core",
+    jars: ["thirdparty/tomtom-dcas-client-core.jar"],
+    sdk_version: "current",
+}
+
+java_import {
+    name: "tomtom-dcas-library",
+    jars: ["thirdparty/tomtom-dcas-library.jar"],
+    sdk_version: "current",
+}
+
+java_import {
+    name: "tomtom-security-provider",
+    jars: ["thirdparty/tomtom-security-provider.jar"],
+    sdk_version: "current",
+}
+
+// MQTT clients
+java_import {
+    name: "autobox-hivemq-mqtt-client",
+    jars: ["thirdparty/hivemq-mqtt-client.jar"],
+    sdk_version: "current",
+}
+
+java_import {
+    name: "autobox-paho-mqtt",
+    jars: ["thirdparty/paho-mqtt.jar"],
+    sdk_version: "current",
+}
+
+// RxJava + Reactive Streams
+java_import {
+    name: "autobox-rxjava",
+    jars: ["thirdparty/rxjava.jar"],
+    sdk_version: "current",
+}
+
+java_import {
+    name: "autobox-reactive-streams",
+    jars: ["thirdparty/reactive-streams.jar"],
+    sdk_version: "current",
+}
+
+// Security / Crypto
+java_import {
+    name: "autobox-jose4j",
+    jars: ["thirdparty/jose4j.jar"],
+    sdk_version: "current",
+}
+
+java_import {
+    name: "autobox-tink",
+    jars: ["thirdparty/tink.jar"],
+    sdk_version: "current",
+}
+
+java_import {
+    name: "autobox-bcprov",
+    jars: ["thirdparty/bcprov.jar"],
+    sdk_version: "current",
+}
+
+// IoT / AMQP (Azure SDK used by TomTom telemetry)
+java_import {
+    name: "autobox-iot-device-client",
+    jars: ["thirdparty/iot-device-client.jar"],
+    sdk_version: "current",
+}
+
+java_import {
+    name: "autobox-proton-j",
+    jars: ["thirdparty/proton-j.jar"],
+    sdk_version: "current",
+}
+
+java_import {
+    name: "autobox-qpid-proton-j-extensions",
+    jars: ["thirdparty/qpid-proton-j-extensions.jar"],
+    sdk_version: "current",
+}
+
+// kotlinx-serialization 1.7.3 — overrides the system external/kotlinx.serialization (1.8.1).
+//
+// PROBLEM: androidx.datastore_datastore-core-okio has static_libs: ["kotlinx_serialization_json"]
+// which pulls in AOSP's 1.8.1 build. In 1.8.1, JsonObject.Companion was removed. TomTom SDK
+// 2.1.2 accesses JsonObject.Companion via getstatic bytecode and crashes with NoSuchFieldError.
+//
+// FIX: prefer:true on kotlinx_serialization_json makes Soong use this prebuilt instead of the
+// java_library source in external/kotlinx.serialization, so only ONE version of JsonObject
+// (1.7.3, with Companion) ends up in the dex.
+//
+// NOTE: kotlinx_serialization_core is NOT overridden with prefer:true because that would break
+// kotlinx_serialization_core_test which uses associates:["kotlinx_serialization_core"] — the
+// associates mechanism requires the source module, not a prebuilt.
+// Instead, autobox-kotlinx-serialization-core (1.7.3) is listed as a static_lib here so that
+// any transitive consumer of kotlinx_serialization_json also gets core 1.7.3.
+java_import {
+    name: "kotlinx_serialization_json",
+    prefer: true,
+    jars: ["thirdparty/kotlinx-serialization-json.jar"],
+    sdk_version: "core_current",
+    min_sdk_version: "24",
+    static_libs: ["autobox-kotlinx-serialization-core"],
+    apex_available: [
+        "//apex_available:anyapex",
+        "//apex_available:platform",
+    ],
+}
+
+java_import {
+    name: "autobox-kotlinx-serialization-json",
+    jars: ["thirdparty/kotlinx-serialization-json.jar"],
+    sdk_version: "current",
+}
+
+java_import {
+    name: "autobox-kotlinx-serialization-core",
+    jars: ["thirdparty/kotlinx-serialization-core.jar"],
+    sdk_version: "core_current",
+    min_sdk_version: "24",
+    apex_available: [
+        "//apex_available:anyapex",
+        "//apex_available:platform",
+    ],
+}
+
+// Logging
+java_import {
+    name: "autobox-kotlin-logging",
+    jars: ["thirdparty/kotlin-logging.jar"],
+    sdk_version: "current",
+}
+
+java_import {
+    name: "autobox-slf4j-api",
+    jars: ["thirdparty/slf4j-api.jar"],
+    sdk_version: "current",
+}
+
+// FlatBuffers
+java_import {
+    name: "autobox-flatbuffers-java",
+    jars: ["thirdparty/flatbuffers-java.jar"],
+    sdk_version: "current",
+}
+
+// TomTom DCAS storage (Android AAR — Room-based storage impl)
+android_library_import {
+    name: "tomtom-sdk-dcas-client-storage-android",
+    aars: ["tomtom/dcas-client-storage-android.aar"],
+    sdk_version: "current",
+    min_sdk_version: "26",
+}
+
+// TomTom DIH client JAR
+java_import {
+    name: "tomtom-dih-client",
+    jars: ["thirdparty/tomtom-dih-client.jar"],
+    sdk_version: "current",
+}
+
+// TomTom AP protobuf (com.tomtom.dcas.client.Filter and related classes)
+java_import {
+    name: "tomtom-ap-protobuf",
+    jars: ["thirdparty/ap-protobuf.jar"],
+    sdk_version: "current",
+}
+
+// Apache Commons Collections 4 (LRUMap and others)
+java_import {
+    name: "autobox-commons-collections4",
+    jars: ["thirdparty/commons-collections4.jar"],
+    sdk_version: "current",
+}
+
+// Apache Commons Lang3
+java_import {
+    name: "autobox-commons-lang3",
+    jars: ["thirdparty/commons-lang3.jar"],
+    sdk_version: "current",
+}
+
+// Apache Commons Compress
+java_import {
+    name: "autobox-commons-compress",
+    jars: ["thirdparty/commons-compress.jar"],
+    sdk_version: "current",
+}
+
+// Apache HttpComponents
+java_import {
+    name: "autobox-apache-httpclient",
+    jars: ["thirdparty/apache-httpclient.jar"],
+    sdk_version: "current",
+}
+
+java_import {
+    name: "autobox-apache-httpcore",
+    jars: ["thirdparty/apache-httpcore.jar"],
+    sdk_version: "current",
+}
+
+java_import {
+    name: "autobox-apache-httpmime",
+    jars: ["thirdparty/apache-httpmime.jar"],
+    sdk_version: "current",
+}
+
+// TomTom navigation drivingassistance model (CityOuterClass etc.)
+java_import {
+    name: "tomtom-navigation-drivingassistance-model",
+    jars: ["thirdparty/tomtom-navigation-drivingassistance-model.jar"],
+    sdk_version: "current",
+}
+
+// TomTom internal protobuf JARs (-internal variants)
+java_import {
+    name: "tomtom-http-framework-binding-protobuf-internal",
+    jars: ["thirdparty/tomtom-http-framework-binding-protobuf-internal.jar"],
+    sdk_version: "current",
+}
+
+java_import {
+    name: "tomtom-navigation-tile-store-protobuf-internal",
+    jars: ["thirdparty/tomtom-navigation-tile-store-protobuf-internal.jar"],
+    sdk_version: "current",
+}
+
+java_import {
+    name: "tomtom-navigation-tiling-protobuf-internal",
+    jars: ["thirdparty/tomtom-navigation-tiling-protobuf-internal.jar"],
+    sdk_version: "current",
+}
+
+java_import {
+    name: "tomtom-ndslive-map-protobuf-internal",
+    jars: ["thirdparty/tomtom-ndslive-map-protobuf-internal.jar"],
+    sdk_version: "current",
+}
+
+java_import {
+    name: "tomtom-nds-store-access-protobuf-internal",
+    jars: ["thirdparty/tomtom-nds-store-access-protobuf-internal.jar"],
+    sdk_version: "current",
+}
+
+java_import {
+    name: "tomtom-nds-store-update-protobuf-internal",
+    jars: ["thirdparty/tomtom-nds-store-update-protobuf-internal.jar"],
+    sdk_version: "current",
+}
+
+java_import {
+    name: "tomtom-native-protobuf-internal",
+    jars: ["thirdparty/tomtom-native-protobuf-internal.jar"],
+    sdk_version: "current",
+}
+
+java_import {
+    name: "tomtom-map-matching-protobuf-internal",
+    jars: ["thirdparty/tomtom-map-matching-protobuf-internal.jar"],
+    sdk_version: "current",
+}
+
+java_import {
+    name: "tomtom-resume-snapshot-protobuf-internal",
+    jars: ["thirdparty/tomtom-resume-snapshot-protobuf-internal.jar"],
+    sdk_version: "current",
+}
+
+java_import {
+    name: "tomtom-route-projection-protobuf-internal",
+    jars: ["thirdparty/tomtom-route-projection-protobuf-internal.jar"],
+    sdk_version: "current",
+}
+
+java_import {
+    name: "tomtom-verbal-message-protobuf-internal",
+    jars: ["thirdparty/tomtom-verbal-message-protobuf-internal.jar"],
+    sdk_version: "current",
+}
+
+java_import {
+    name: "tomtom-openlr-binding-protobuf-internal",
+    jars: ["thirdparty/tomtom-openlr-binding-protobuf-internal.jar"],
+    sdk_version: "current",
+}
+
+java_import {
+    name: "tomtom-reverse-geocoding-protobuf-internal",
+    jars: ["thirdparty/tomtom-reverse-geocoding-protobuf-internal.jar"],
+    sdk_version: "current",
+}
+
+java_import {
+    name: "tomtom-directions-offline-protobuf-internal",
+    jars: ["thirdparty/tomtom-directions-offline-protobuf-internal.jar"],
+    sdk_version: "current",
+}
+
+java_import {
+    name: "tomtom-search-offline-protobuf-internal",
+    jars: ["thirdparty/tomtom-search-offline-protobuf-internal.jar"],
+    sdk_version: "current",
+}
+
+java_import {
+    name: "tomtom-structured-search-protobuf-internal",
+    jars: ["thirdparty/tomtom-structured-search-protobuf-internal.jar"],
+    sdk_version: "current",
+}
+
+java_import {
+    name: "tomtom-traffic-client-protobuf-internal",
+    jars: ["thirdparty/tomtom-traffic-client-protobuf-internal.jar"],
+    sdk_version: "current",
+}
+
+// TomTom internal implementation AARs
+android_library_import {
+    name: "tomtom-sdk-file-loader-internal",
+    aars: ["tomtom/file-loader-internal.aar"],
+    sdk_version: "current",
+    min_sdk_version: "26",
+}
+
+android_library_import {
+    name: "tomtom-sdk-mapdisplay-engine-binding-internal",
+    aars: ["tomtom/mapdisplay-engine-binding-internal.aar"],
+    sdk_version: "current",
+    min_sdk_version: "26",
+}
+
+android_library_import {
+    name: "tomtom-sdk-gesture-detector",
+    aars: ["tomtom/gesture-detector.aar"],
+    sdk_version: "current",
+    min_sdk_version: "26",
+}
+
+android_library_import {
+    name: "tomtom-sdk-map-display-api",
+    aars: ["tomtom/map-display-api.aar"],
+    sdk_version: "current",
+    min_sdk_version: "26",
+}
+
+// TomTom native library (extracted from native.aar — android_library_import does not propagate JNI libs)
+cc_prebuilt_library_shared {
+    name: "libtomtom-navsdk",
+    srcs: ["jni/arm64-v8a/libtomtom-navsdk.so"],
+    shared_libs: ["libEGL", "libGLESv3", "libandroid", "libc", "libdl", "liblog", "libm"],
+    strip: {
+        none: true,
+    },
+    prefer: true,
+}
+
+// LiteRT (TensorFlow Lite) 1.4.2 — sign classification model runtime
+android_library_import {
+    name: "autobox-litert-api",
+    aars: ["litert-api-1.4.2.aar"],
+    sdk_version: "current",
+    min_sdk_version: "26",
+}
+
+android_library_import {
+    name: "autobox-litert",
+    aars: ["litert-1.4.2.aar"],
+    sdk_version: "current",
+    min_sdk_version: "26",
+    static_libs: ["autobox-litert-api"],
+}
+
+// TFLite native runtime (extracted from litert-1.4.2.aar — JNI libs are not propagated by android_library_import)
+cc_prebuilt_library_shared {
+    name: "libtensorflowlite_jni",
+    srcs: ["jni/arm64-v8a/libtensorflowlite_jni.so"],
+    shared_libs: ["libc", "libdl", "liblog", "libm"],
+    strip: {
+        none: true,
+    },
+    prefer: true,
+}

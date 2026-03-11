@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">AutoBox Launcher</string>
+
+    <!-- Settings screen -->
+    <string name="settings_title">Настройки</string>
+    <string name="exit_button">ВЫХОД</string>
+
+    <string name="settings_theme">Тема оформления</string>
+    <string name="theme_light">Светлая</string>
+    <string name="theme_dark">Тёмная</string>
+    <string name="theme_auto">Авто</string>
+
+    <string name="settings_volume">Громкость</string>
+    <string name="settings_brightness">Яркость экрана</string>
+
+    <string name="settings_units">Единицы измерения</string>
+    <string name="units_metric">Метрические (км/ч)</string>
+    <string name="units_imperial">Американские (mph)</string>
+
+    <string name="settings_media_app">Музыкальное приложение</string>
+    <string name="media_app_not_selected">Не выбрано</string>
+    <string name="media_app_no_apps">Медиа-приложения не найдены</string>
+
+    <!-- Call screen — tabs -->
+    <string name="call_tab_contacts">Контакты</string>
+    <string name="call_tab_recent">Недавние</string>
+    <string name="call_tab_dialpad">Набор</string>
+
+    <!-- Call screen — search -->
+    <string name="call_search_contacts_hint">Поиск контактов…</string>
+    <string name="call_search_recent_hint">Поиск в истории…</string>
+
+    <!-- Call screen — empty states -->
+    <string name="call_no_contacts">Контакты не найдены</string>
+    <string name="call_no_results">Нет результатов для «%s»</string>
+    <string name="call_no_recent">История звонков пуста</string>
+
+    <!-- Call screen — actions -->
+    <string name="call_action_call">Позвонить</string>
+    <string name="call_action_callback">Перезвонить</string>
+    <string name="call_action_delete">Удалить</string>
+    <string name="call_enter_number">Введите номер</string>
+    <string name="call_incoming">Входящий звонок</string>
+    <string name="call_decline">Отклонить</string>
+    <string name="call_answer">Ответить</string>
+    <string name="call_mute_on">Вкл. микрофон</string>
+    <string name="call_mute_off">Выкл. микрофон</string>
+    <string name="call_audio_speaker">Динамик</string>
+    <string name="call_audio_earpiece">Наушник</string>
+    <string name="call_end">Завершить</string>
+    <string name="call_unknown_caller">Неизвестный</string>
+
+    <!-- Call screen — time labels -->
+    <string name="call_time_just_now">только что</string>
+    <string name="call_time_minutes_ago">%d мин. назад</string>
+
+    <!-- Navigation -->
+    <string name="nav_status_active">Навигация активна</string>
+    <string name="nav_status_free_driving">Свободное движение</string>
+    <string name="nav_status_route_ready">Маршрут готов</string>
+    <string name="nav_stop">Стоп</string>
+    <string name="nav_start">Старт</string>
+    <string name="nav_clear">Сбросить</string>
+    <string name="nav_stop_description">Остановить навигацию</string>
+    <string name="nav_error_route_not_returned">Маршрут не найден</string>
+    <string name="nav_error_destination_not_found">Адрес не найден</string>
+    <string name="nav_eta">ETA %s</string>
+    <string name="nav_distance">Расстояние: %s</string>
+
+    <!-- Map -->
+    <string name="map_zoom_in">Приблизить</string>
+    <string name="map_zoom_out">Отдалить</string>
+    <string name="map_my_location">Моё местоположение</string>
+    <string name="map_search_hint">Поиск адреса…</string>
+    <string name="map_clear_search">Очистить</string>
+
+    <!-- Multimedia -->
+    <string name="multimedia_no_app_selected">Установите или выберите медиа-приложение в Настройках</string>
+    <string name="media_album_art">Обложка альбома</string>
+    <string name="media_nothing_playing">Ничего не играет</string>
+    <string name="media_music_note">♪</string>
+    <string name="media_previous">Предыдущий</string>
+    <string name="media_play">Воспроизвести</string>
+    <string name="media_pause">Пауза</string>
+    <string name="media_next">Следующий</string>
+    <string name="media_no_source">Нет источника</string>
+
+    <!-- Dialpad letter hints -->
+    <string name="dialpad_2">АБВ</string>
+    <string name="dialpad_3">ГДЕ</string>
+    <string name="dialpad_4">ЖЗИ</string>
+    <string name="dialpad_5">КЛМ</string>
+    <string name="dialpad_6">НОП</string>
+    <string name="dialpad_7">РСТ</string>
+    <string name="dialpad_8">УФХ</string>
+    <string name="dialpad_9">ЦЧШ</string>
+</resources>

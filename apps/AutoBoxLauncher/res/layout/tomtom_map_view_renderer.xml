@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Override: ensure map-display-standard's MichiMapRendererView wins over the
+  ViewStub placeholder in map-display-api (resource conflict in AOSP static_libs merge).
+-->
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.tomtom.sdk.map.display.ui.MichiMapRendererView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+</merge>

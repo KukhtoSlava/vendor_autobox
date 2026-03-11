@@ -1,0 +1,261 @@
+// AutoBoxLauncher — Home launcher for AutoBox ROM
+// API key: set AUTOBOX_TOMTOM_API_KEY in your build environment or
+// place the key in vendor/autobox/apps/AutoBoxLauncher/tomtom.key
+
+package {
+    default_applicable_licenses: ["Android-Apache-2.0"],
+}
+
+// Generates BuildConfig.java with the TomTom API key.
+// The key is read from tomtom.key (one line, no trailing newline).
+genrule {
+    name: "AutoBoxLauncher-BuildConfig",
+    srcs: ["tomtom.key"],
+    out: ["com/autobox/autoboxlauncher/BuildConfig.java"],
+    cmd: "KEY=$$(cat $(in) | tr -d '\\n'); " +
+         "echo \"package com.autobox.autoboxlauncher;\" > $(out); " +
+         "echo \"public final class BuildConfig {\" >> $(out); " +
+         "echo \"    public static final boolean DEBUG = false;\" >> $(out); " +
+         "echo \"    public static final String APPLICATION_ID = \\\"com.autobox.autoboxlauncher\\\";\" >> $(out); " +
+         "echo \"    public static final String BUILD_TYPE = \\\"release\\\";\" >> $(out); " +
+         "echo \"    public static final String TOMTOM_API_KEY = \\\"$$KEY\\\";\" >> $(out); " +
+         "echo \"}\" >> $(out)",
+}
+
+prebuilt_etc {
+    name: "privapp-permissions-AutoBoxLauncher",
+    src: "permissions/privapp-permissions-AutoBoxLauncher.xml",
+    sub_dir: "permissions",
+    filename_from_src: true,
+}
+
+prebuilt_etc {
+    name: "default-permissions-AutoBoxLauncher",
+    src: "permissions/default-permissions-AutoBoxLauncher.xml",
+    sub_dir: "default-permissions",
+    filename_from_src: true,
+}
+
+android_app {
+    name: "AutoBoxLauncher",
+
+    srcs: [
+        "src/**/*.kt",
+        ":AutoBoxLauncher-BuildConfig",
+    ],
+
+    resource_dirs: ["res"],
+    asset_dirs: ["assets"],
+    manifest: "AndroidManifest.xml",
+
+    platform_apis: true,
+    min_sdk_version: "26",
+    target_sdk_version: "35",
+
+    kotlincflags: [
+        "-Xjvm-default=all",
+        "-P plugin:androidx.compose.compiler.plugins.kotlin:sourceInformation=true",
+    ],
+
+    // Sign with platform key for privileged permissions (InCallService, HOME)
+    certificate: "platform",
+    privileged: true,
+
+    // Skip build-time AOT dex verification (avoids dex2oat hard failures
+    // caused by class-resolution issues in prebuilt deps; verified at runtime)
+    dex_preopt: {
+        enabled: false,
+    },
+
+    // Store .tflite model uncompressed so AssetManager.openFd() can memory-map it.
+    // Compressed assets cannot be opened as file descriptors (required by TFLite interpreter).
+    aaptflags: ["-0 .tflite"],
+
+    // Keep kotlinx-serialization Companion objects and serializer descriptors that
+    // TomTom SDK accesses via static field references. R8 cannot trace these
+    // references through pre-compiled TomTom AAR bytecode and strips them otherwise.
+    optimize: {
+        proguard_flags_files: ["proguard-rules.pro"],
+    },
+
+    // Embed .so files from TomTom SDK into the APK
+    use_embedded_native_libs: true,
+
+    jni_libs: ["libtomtom-navsdk", "libtensorflowlite_jni"],
+
+    static_libs: [
+        // AndroidX
+        "androidx.compose.runtime_runtime",
+        "androidx.core_core-ktx",
+        "androidx.lifecycle_lifecycle-runtime-ktx",
+        "androidx.activity_activity-compose",
+        "androidx.compose.ui_ui",
+        "androidx.compose.ui_ui-graphics",
+        "androidx.compose.ui_ui-tooling-preview",
+        "androidx.compose.material3_material3",
+        "androidx.navigation_navigation-compose",
+        "androidx.compose.material_material-icons-extended",
+        "androidx.lifecycle_lifecycle-runtime-compose",
+        "autobox-appcompat",
+        "autobox-appcompat-resources",
+        "androidx.datastore_datastore-preferences",
+        "androidx.camera_camera-core",
+        "androidx.camera_camera-camera2",
+        "androidx.camera_camera-lifecycle",
+        "androidx.lifecycle_lifecycle-process",
+
+        // Room (required by dcas-client-storage-android)
+        "androidx.room_room-runtime",
+        "androidx.room_room-ktx",
+        "androidx.room_room-common",
+
+        "androidx-constraintlayout_constraintlayout",
+
+        // TomTom SDK
+        "tomtom-sdk-init",
+        "tomtom-sdk-native",
+        "tomtom-sdk-feature-toggle",
+        "tomtom-sdk-adasisv2",
+        "tomtom-sdk-annotations",
+        "tomtom-sdk-font-provider",
+        "tomtom-sdk-common-configuration",
+        "tomtom-sdk-common-core",
+        "tomtom-sdk-file-loader",
+        "tomtom-sdk-http-framework",
+        "tomtom-sdk-http-framework-binding",
+        "tomtom-sdk-http-handler",
+        "tomtom-sdk-initializer",
+        "tomtom-sdk-morton",
+        "tomtom-sdk-mqtt-connector",
+        "tomtom-sdk-data-management-common",
+        "tomtom-sdk-data-store",
+        "tomtom-sdk-location-decoder",
+        "tomtom-sdk-map-references",
+        "tomtom-sdk-unified-location-decoder",
+        "tomtom-sdk-geojson",
+        "tomtom-sdk-hazards",
+        "tomtom-sdk-hazards-common",
+        "tomtom-sdk-http-core",
+        "tomtom-sdk-location-road",
+        "tomtom-sdk-location-model",
+        "tomtom-sdk-location-provider-android",
+        "tomtom-sdk-location-provider-api",
+        "tomtom-sdk-location-provider-default",
+        "tomtom-sdk-location-provider-mapmatched",
+        "tomtom-sdk-logging-common",
+        "tomtom-sdk-logger",
+        "tomtom-sdk-logging-framework-binding",
+        "tomtom-sdk-elastic-data-provider",
+        "tomtom-sdk-map-display-common",
+        "tomtom-sdk-map-display-compose-common",
+        "tomtom-sdk-map-display-compose-standard",
+        "tomtom-sdk-map-display-standard",
+        "tomtom-sdk-map-display-standard-binding",
+        "tomtom-sdk-map-tile-store",
+        "tomtom-sdk-map-tile-store-common",
+        "tomtom-sdk-map-tile-store-navigation",
+        "tomtom-sdk-maps-telemetry",
+        "tomtom-sdk-native-library-loader",
+        "tomtom-sdk-navigation",
+        "tomtom-sdk-openlr-binding",
+        "tomtom-sdk-personal-data-common",
+        "tomtom-sdk-range-calculator",
+        "tomtom-sdk-route-planner",
+        "tomtom-sdk-routing-common",
+        "tomtom-sdk-safety-locations",
+        "tomtom-sdk-safety-locations-common",
+        "tomtom-sdk-reverse-geocoder",
+        "tomtom-sdk-search",
+        "tomtom-sdk-search-common",
+        "tomtom-sdk-telemetry",
+        "tomtom-sdk-traffic-client",
+        "tomtom-sdk-traffic-common",
+        "tomtom-sdk-traffic-internal",
+        "tomtom-sdk-vehicle-common",
+        "tomtom-sdk-vehicle-provider",
+        "tomtom-sdk-quantity",
+
+        // Third-party
+        "guava",
+        "gson",
+        "autobox-okhttp3",
+        "autobox-okio",
+        "autobox-protobuf-java",
+        "autobox-protobuf-kotlin",
+        "tomtom-http-framework-binding-protobuf",
+        "tomtom-native-protobuf",
+        "tomtom-ndslive-map-protobuf",
+        "tomtom-navigation-tile-store-protobuf",
+        "tomtom-navigation-tiling-protobuf",
+        "tomtom-nds-store-access-protobuf",
+        "tomtom-nds-store-update-protobuf",
+        "tomtom-map-matching-protobuf",
+        "tomtom-resume-snapshot-protobuf",
+        "tomtom-route-projection-protobuf",
+        "tomtom-verbal-message-protobuf",
+        "tomtom-openlr-binding-protobuf",
+        "tomtom-reverse-geocoding-protobuf",
+        "tomtom-directions-offline-protobuf",
+        "tomtom-search-offline-protobuf",
+        "tomtom-structured-search-protobuf",
+        "tomtom-sensoris",
+        "tomtom-traffic-client-protobuf",
+        "tomtom-sdk-dcas-client-storage-android",
+        "tomtom-sdk-file-loader-internal",
+        "tomtom-sdk-mapdisplay-engine-binding-internal",
+        "tomtom-sdk-gesture-detector",
+        "tomtom-sdk-map-display-api",
+        "tomtom-dih-client",
+        "tomtom-ap-protobuf",
+        "autobox-commons-collections4",
+        "autobox-commons-lang3",
+        "autobox-commons-compress",
+        "autobox-apache-httpclient",
+        "autobox-apache-httpcore",
+        "autobox-apache-httpmime",
+        "tomtom-navigation-drivingassistance-model",
+        "tomtom-http-framework-binding-protobuf-internal",
+        "tomtom-navigation-tile-store-protobuf-internal",
+        "tomtom-navigation-tiling-protobuf-internal",
+        "tomtom-ndslive-map-protobuf-internal",
+        "tomtom-nds-store-access-protobuf-internal",
+        "tomtom-nds-store-update-protobuf-internal",
+        "tomtom-native-protobuf-internal",
+        "tomtom-map-matching-protobuf-internal",
+        "tomtom-resume-snapshot-protobuf-internal",
+        "tomtom-route-projection-protobuf-internal",
+        "tomtom-verbal-message-protobuf-internal",
+        "tomtom-openlr-binding-protobuf-internal",
+        "tomtom-reverse-geocoding-protobuf-internal",
+        "tomtom-directions-offline-protobuf-internal",
+        "tomtom-search-offline-protobuf-internal",
+        "tomtom-structured-search-protobuf-internal",
+        "tomtom-traffic-client-protobuf-internal",
+        "tomtom-dcas-client-core",
+        "tomtom-dcas-library",
+        "tomtom-security-provider",
+        "autobox-hivemq-mqtt-client",
+        "autobox-paho-mqtt",
+        "autobox-rxjava",
+        "autobox-reactive-streams",
+        "autobox-jose4j",
+        "autobox-tink",
+        "autobox-bcprov",
+        "autobox-iot-device-client",
+        "autobox-proton-j",
+        "autobox-qpid-proton-j-extensions",
+        // Use the prefer:true override of external/kotlinx.serialization (1.8.1 → 1.7.3).
+        // This prevents JsonObject.Companion from disappearing: 1.8.1 removed it, TomTom 2.1.2
+        // needs it. Using the same module name also prevents duplicate-class conflicts with
+        // datastore-core-okio which transitively depends on kotlinx_serialization_json.
+        // kotlinx_serialization_core (1.7.3) is transitively included via kotlinx_serialization_json.
+        "kotlinx_serialization_json",
+        "autobox-kotlin-logging",
+        "autobox-slf4j-api",
+        "autobox-flatbuffers-java",
+        "logback-android",
+
+        // TFLite runtime for traffic sign classification
+        "autobox-litert",
+    ],
+}

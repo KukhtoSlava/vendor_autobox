@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+    <component name="ProjectModuleManager">
+        <modules>
+            <module fileurl="file:///$PROJECT_DIR$/AutoBoxLauncher.iml" filepath="$PROJECT_DIR$/AutoBoxLauncher.iml" />
+            <module fileurl="file:///$PROJECT_DIR$/dependencies.iml" filepath="$PROJECT_DIR$/dependencies.iml" />
+            <module fileurl="file:////aosp/lineage/frameworks/base/framework_srcjars.iml" filepath="/aosp/lineage/frameworks/base/framework_srcjars.iml" />
+            <module fileurl="file:////aosp/lineage/vendor/autobox/apps/AutoBoxLauncher/AutoBoxLauncher.iml" filepath="/aosp/lineage/vendor/autobox/apps/AutoBoxLauncher/AutoBoxLauncher.iml" />
+@ENABLE_DEBUGGER_MODULE@
+        </modules>
+    </component>
+</project>

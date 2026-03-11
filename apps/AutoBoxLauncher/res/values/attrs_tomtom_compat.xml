@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Missing attr declarations required by TomTom SDK AARs.
+     TomTom references these in declare-styleable without declaring them,
+     which Gradle tolerates but AOSP aapt2 does not. -->
+<resources>
+    <attr name="renderToTexture" format="boolean" />
+</resources>
