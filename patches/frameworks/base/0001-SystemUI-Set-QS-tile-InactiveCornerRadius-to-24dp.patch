@@ -1,0 +1,30 @@
+From 9730199544c11dc582c03f8fd38e597b73307ae4 Mon Sep 17 00:00:00 2001
+From: Slava Kukhto <kukhto.slava@gmail.com>
+Date: Wed, 11 Mar 2026 11:52:23 +0100
+Subject: [PATCH] SystemUI: Set QS tile InactiveCornerRadius to 24dp
+
+Match inactive tile corner radius (was 50dp) to the active tile radius
+(24dp) for a consistent look across all QS tile states.
+
+Co-Authored-By: Claude Sonnet 4.6 <noreply@anthropic.com>
+Change-Id: I3749d80eec43f03b7ef6a033f844e567dfe8ba9a
+---
+ .../systemui/qs/panels/ui/compose/infinitegrid/CommonTile.kt    | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/packages/SystemUI/src/com/android/systemui/qs/panels/ui/compose/infinitegrid/CommonTile.kt b/packages/SystemUI/src/com/android/systemui/qs/panels/ui/compose/infinitegrid/CommonTile.kt
+index 0ae396615..8b48b028c 100644
+--- a/packages/SystemUI/src/com/android/systemui/qs/panels/ui/compose/infinitegrid/CommonTile.kt
++++ b/packages/SystemUI/src/com/android/systemui/qs/panels/ui/compose/infinitegrid/CommonTile.kt
+@@ -422,7 +422,7 @@ object CommonTileDefaults {
+     val TileEndPadding = 12.dp
+     val TileDualTargetEndPadding = 8.dp
+     val TileArrangementPadding = 6.dp
+-    val InactiveCornerRadius = 50.dp
++    val InactiveCornerRadius = 24.dp
+     val TileLabelBlurWidth = 32.dp
+     const val TILE_MARQUEE_ITERATIONS = 1
+     const val TILE_INITIAL_DELAY_MILLIS = 2000
+-- 
+2.34.1
+
